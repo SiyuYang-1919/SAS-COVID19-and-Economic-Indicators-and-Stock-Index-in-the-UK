@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.6)  6 FEB 2021 23:00
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.6)  7 FEB 2021 23:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -60,13 +60,18 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 6.
  [1
 
-] [1] (./Report.aux) ) 
+]
+Overfull \hbox (189.475pt too wide) in paragraph at lines 23--24
+[]\TU/lmr/m/n/10 (source: https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/gdpmonthlyestimateuk/november2020) 
+ []
+
+[1] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 447 strings out of 479418
- 8375 string characters out of 5884586
- 246340 words of memory out of 5000000
- 18030 multiletter control sequences out of 15000+600000
- 535114 words of font info for 38 fonts, out of 8000000 for 9000
+ 449 strings out of 479418
+ 8423 string characters out of 5884586
+ 247340 words of memory out of 5000000
+ 18031 multiletter control sequences out of 15000+600000
+ 535122 words of font info for 39 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  24i,6n,19p,153b,179s stack positions out of 5000i,500n,10000p,200000b,80000s
 
