@@ -66,10 +66,10 @@
   \end{document}
 ```
 
-  When you create a .tex file, you will find that a new button TEX appears at the left of your VSCode interface (below the Extension button). Click it and find the 'Build LaTeX project' command, click it to see what will happen. If there is no error, you can choose a way to view the PDF file in the 'View LaTeX PDF' section and have a look at the file. If you get some notification like this one: 'recipe terminated with fatal error spawn latexmk enoent', then let's move to the next section : )
+  When you create a .tex file, you will find that a new button TEX appears at the left of your VSCode interface (below the Extension button). Click it and find the 'Build LaTeX project' command, click it to see what will happen. If there is no error, you can choose a way to view the PDF file in the 'View LaTeX PDF' section and have a look at the file. If you get some notification like this one: 'recipe terminated with fatal error spawn latexmk enoent', then let's move to the next section : )
 
 2. Problems/Erros that I met and solutions
-  - 1) How to solve Error: 'recipe terminated with fatal error spawn latexmk enoent'
+  - How to solve Error: 'recipe terminated with fatal error spawn latexmk enoent'
     - Step 1: Check if you have latexmk installed. You can download TeX Live Utility to see all the packages installed and install those that you haven't. Install or update latexmk through TeX Live Utility. (Reference: https://stackoverflow.club/install-latex-on-win10 and https://blog.csdn.net/qq_35952816/article/details/109068245)
     - Step 2 (very critical): Edit the settings.json file. Open it (as instructions in the section 1) and replace code with:
 
@@ -144,7 +144,7 @@ In fact, there are many versions of code that may solve this error. The code abo
 - [Jianshu](https://www.jianshu.com/p/538856b3e5c0)   
 - [Zhihu](https://zhuanlan.zhihu.com/p/120815558)
 
-- 2) How to solve Error: 'recipe terminated with error'
+- How to solve Error: 'recipe terminated with error'
   - In fact, what I suggest is that reviewing your code in .tex file first to see if there is any spelling mistake, because this is what happened to me : )
   - Or you may want to edit the settings.json file again.
 
