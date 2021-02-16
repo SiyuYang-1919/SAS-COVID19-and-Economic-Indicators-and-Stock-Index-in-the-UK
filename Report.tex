@@ -16,7 +16,7 @@
 This report is aimed to research on the associations between the severity of COVID-19 and some important 
 economics indicators in the UK. More specifically, this report will answer the following questions:
 1) Which COVID-19 severity indicator(s) and which economics indicator(s) have high and significant relationships?
-2) And how these severity indicator(s) impact these economics indicator(s) exactly?
+2) And how the severity indicator(s) impact the economics indicator(s) exactly?
 
 
 \section{Datasets}
@@ -32,6 +32,20 @@ respectively. Each dataset includes the newly-add number and cumulative number.\
 \noindent
 3) Patients admitted to hospital
 \footnote[3]{https://coronavirus.data.gov.uk/details/healthcare}\par
+\begin{figure}[H]
+\centering
+    \subfigure[COVID19 Cases]{
+    \label{Fig.sub.1}
+    \includegraphics[width=5cm]{covid-19_cases.jpg}}
+    \subfigure[COVID19 Deaths]{
+    \label{Fig.sub.2}
+    \includegraphics[width=5cm]{covid19_deaths.jpg}}
+    \subfigure[COVID19 Patients]{
+    \label{Fig.sub.3}
+    \includegraphics[width=5cm]{covid19_patients.jpg}}
+    \caption{COVID19 Indicators}
+    \label{Fig.main}
+\end{figure}
 
 \subsection{Economic indicators (updated in November 2020)} 
 The following two datasets contain the data of five economics indicators: monthly GDP, service index, 
@@ -42,59 +56,60 @@ production index, construction index, and unemployment rate.\par
 \noindent
 2) Unemployment rate (aged 16 and over, seasonally adjusted)
 \footnote[5]{https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/}
-
+\begin{figure}[H] 
+\centering 
+\includegraphics[width=10cm]{economics_indicators.jpg} 
+\caption{Economics Indicators}
+\end{figure}
+    
 \subsection{Stock Index (updated on 05-02-2021)}
 1) FTSE 100 Index;\par
 \noindent
 2) FTSE All-Share Index
 \footnote[6]{Source: Capital IQ}
-
-
+\begin{figure}[H] 
+\centering 
+\includegraphics[width=8cm]{ftse.jpg} 
+\caption{FTSE Stock Indicators}
+\end{figure}
+        
 \section{Methodology and Results}
 1. To answer the first research question, correlations between COVID-19 severity indicators
 and economics indicators(including stock index) have been examined:
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\includegraphics[width=15cm]{corr_economics_new.jpg}
 \caption{Correlation Matrix Economics Indicators (new)}
-\label{Fig1. Corrlation Matrix 1}
-\end{figure}
+\includegraphics[width=15cm]{corr_economics_new.jpg}
+\end{table}
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\includegraphics[width=15cm]{corr_economics_cum.jpg}
 \caption{Corrlation Matrix Economics Indicators (cum)}
-\label{Fig2. Corrlation Matrix 1}
-\end{figure}
+\includegraphics[width=15cm]{corr_economics_cum.jpg}
+\end{table}
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\includegraphics[width=15cm]{corr_FTSE.jpg}
 \caption{Correlation Matrix FTSE}
-\label{Fig2. Corrlation Matrix 2}
-\end{figure}
+\includegraphics[width=13cm]{corr_stock.jpg}
+\end{table}
 
-\noindent
-From Fig.1, we can see that only 'deaths' have significant and relatively high correlations with monthly GDP and 
-components indexes; Fig.2 tells us that all three cumulative COVID-19 indicators have significant and high 
-correlations with unemployment rate; Fig.3 shows that 'cumdeaths' and 'cumpatients' have significant and relatively
-high correlations with two stock indexes whereas 'cases' and 'patients' have significant correlations with 
-stock indexes, 'deaths' and 'cumcases' also have significant correlations with FTSE All Share.\par
 \hspace*{\fill}
 
 \noindent
-2. As for the second question, regression analysis is implemented to further explore how COVID-19 indicators impact 
-economics indicators. Only highly and significantly correlated variables are chosen to perform regression analysis.\par
+2. As for the second question, regression analysis is implemented to further explore how the COVID-19 indicators impact 
+the economics indicators. Only highly and significantly correlated variables are chosen to perform regression analysis.\par
 \noindent
-1) Table1 is the summary of regression analysis (with only one parameter) on COVID-19 indicators and economics indicators (including
-stock indexes);\par
+1) Table 4 and Table 5 is the summary of regression analysis (with only one parameter) on COVID-19 indicators with economics indicators 
+and stock indexes, respectively;\par
 \noindent
-2) This report also treis to build regression models to predict the stock indexes with multiple variables. 
-Table2 is the summary of some models with relatively good performance. 
+2) This report also tries to build regression models to predict the stock indexes with multiple variables. 
+Table 6 is the summary of some models with relatively good performance. 
 
 \begin{table}[H]
     \begin{center}
+    \caption{Regression Analysis on Economics Indicators}
     \begin{tabular}{llcccc}
         \toprule
         Y&X&Coef&Intercept&p&R-square\\
@@ -106,36 +121,51 @@ Table2 is the summary of some models with relatively good performance.
         Unemployment Rate&CumCases&1.09e-6&4.05&0.0017&0.73\\
         Unemployment Rate&CumDeaths&2.04e-5&3.73&0.050&0.50\\
         Unemployment Rate&CumCases&7.14e-6&3.62&0.013&0.67\\
-        \midrule
-        FTSE100&CumDeaths&0.015&5634.58&<0.0001&0.38\\
-        FTSE100&CumPatients&0.0038&5736.78&<0.0001&0.20\\
-        FTSE All Share&CumDeaths&0.010&3080.48&<0.0001&0.46\\
-        FTSE All Share&CumPatients&0.0030&3114.20&<0.0001&0.31\\
         \bottomrule
     \end{tabular}
-    \caption{Regression Analysis}
     \end{center}
 \end{table}
 
 \begin{table}[H]
     \begin{center}
+    \caption{Regression Analysis on FTSE Indexes}
+    \begin{tabular}{llcccc}
+        \toprule
+        Y&X&Coef&Intercept&p&R-square\\
+        \midrule
+        FTSE100&CumDeaths&0.0124&5544.47&<0.0001&0.67\\
+        FTSE100&CumPatients&0.0031&5626.53&<0.0001&0.64\\
+        FTSE100&CumCases&0.00023&5912.69&<0.0001&0.54\\
+        FTSE100&cases&0.0112&5976.05&<0.0001&0.30\\
+        FTSE All Share&CumDeaths&0.0083&3029.41&<0.0001&0.76\\
+        FTSE All Share&CumPatients&0.0021&3080.99&<0.0001&0.74\\
+        FTSE All Share&CumCases&0.00016&3274.74&<0.0001&0.64\\
+        FTSE All Share&cases&0.0080&3312.77&<0.0001&0.39\\
+        \bottomrule
+    \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+    \caption{Multi-variable Regression Models}
     \begin{tabular}{llcccccc}
         \toprule
         Y&X1&Coef1&X2&Coef2&Intercept&p&R-square\\
         \midrule
-        FTSE100&cases&0.0480&patients&-0.1458&6.114.67&<0.0001&0.44\\
-        FTSE100&cumcases&0.0020&cumpatients&-0.0029&5931.38&<0.0001&0.40\\
-        FTSE100&cumdeaths&0.0314&patients&-0.1170&3428.90&<0.0001&0.54\\
-        FTSE All Share&cases&0.0314&patients&-0.1170&3428.90&<0.0001&0.54\\
-        FTSE All Share&cumcases&0.0013&cumpatients&-0.0014&3241.15&<0.0001&0.52\\
-        FTSE All Share&cumdeaths&-0.0535&cumpatients&0.0209&5686.38&<0.0001&0.31\\
+        FTSE100&cumdeaths&0.025&cumpatients&-0.0031&5480.91&<0.0001&0.68\\
+        FTSE All Share&cumdeaths&0.011&cumpatients&-0.0008&3013.86&<0.0001&0.76\\
         \bottomrule
     \end{tabular}
     \end{center}
-    \caption{Regression Models to Predict the Stock Indexes}
 \end{table}
 
-\section{Limitations}
+\section{Conclusion and Limitations}
+From the analysis above, we can conclude:
+1) Among three newly-added COVID-19 indicators, only the number of deaths has close
+relationship with economics indicators and it negatively affects the these indicators.
+One additional death case will lead to these indicators decrease 0.00073, 0.00068, 0.0074, and 0.0014, respectively.
+2) 
 
 \begin{appendix}
 \end{appendix}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.6)  16 FEB 2021 12:37
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.6)  16 FEB 2021 17:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -184,26 +184,37 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 28.
+File: covid-19_cases.jpg Graphic file (type bmp)
+<covid-19_cases.jpg>
+File: covid19_deaths.jpg Graphic file (type bmp)
+<covid19_deaths.jpg>
+File: covid19_patients.jpg Graphic file (type bmp)
+<covid19_patients.jpg>
+File: economics_indicators.jpg Graphic file (type bmp)
+<economics_indicators.jpg>
+ [1]
+File: ftse.jpg Graphic file (type bmp)
+<ftse.jpg>
 File: corr_economics_new.jpg Graphic file (type bmp)
 <corr_economics_new.jpg>
- [1]
+ [2]
 File: corr_economics_cum.jpg Graphic file (type bmp)
 <corr_economics_cum.jpg>
-File: corr_FTSE.jpg Graphic file (type bmp)
-<corr_FTSE.jpg>
- [2] [3]
-Overfull \hbox (19.07928pt too wide) in paragraph at lines 122--134
+File: corr_stock.jpg Graphic file (type bmp)
+<corr_stock.jpg>
+ [3] [4]
+Overfull \hbox (11.87929pt too wide) in paragraph at lines 152--160
  [] 
  []
 
-[4] (./Report.aux) ) 
+[5] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
- 1676 strings out of 479418
- 25712 string characters out of 5884586
- 277635 words of memory out of 5000000
- 19202 multiletter control sequences out of 15000+600000
+ 1710 strings out of 479418
+ 26313 string characters out of 5884586
+ 277682 words of memory out of 5000000
+ 19231 multiletter control sequences out of 15000+600000
  536059 words of font info for 45 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 30i,8n,26p,197b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,8n,26p,197b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Report.pdf (5 pages).
+Output written on Report.pdf (6 pages).
