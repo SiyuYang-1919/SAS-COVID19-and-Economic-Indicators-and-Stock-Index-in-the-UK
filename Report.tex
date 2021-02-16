@@ -5,6 +5,7 @@
 \usepackage{subfigure}
 \usepackage{booktabs}
 \usepackage{appendix}
+\usepackage{makecell}
 \geometry{left=2cm,right=2cm}
 \title{COVID-19 and Economics Indicators in the UK}
 \author{Siyu YANG}
@@ -16,16 +17,16 @@
 \section{Research Questions}
 This report is aimed to research on the associations between the severity of COVID-19 and some important 
 economics indicators in the UK. More specifically, this report will answer the following questions:
-1) Which COVID-19 severity indicator(s) and which economics indicator(s) have high and significant relationships?
+1) Which COVID-19 severity indicator(s) and which economics indicator(s) have high and significant correlations?
 2) And how the severity indicator(s) impact the economics indicator(s) exactly?
 
 
 \section{Datasets}
 \subsection{COVID-19 Datasets (updated on 05-02-2021)}
 The following three COVID-19 datasets contain the number of positive cases, deaths, and patients admitted to hospitals, 
-respectively. Each dataset includes the newly-add number and cumulative number.\par
+respectively. Each dataset includes the newly-added number and cumulative number.\par
 \noindent
-1) Positive cases by spicemen date
+1) Positive cases by spicemen date;
 \footnote[1]{https://coronavirus.data.gov.uk/details/cases};\par
 \noindent
 2) Deaths with COVID-19 within 28 days of positive test by date of death
@@ -49,7 +50,7 @@ respectively. Each dataset includes the newly-add number and cumulative number.\
 \end{figure}
 
 \subsection{Economic indicators (updated in November 2020)} 
-The following two datasets contain the data of five economics indicators: monthly GDP, service index, 
+The following two datasets contain the data of five economics indicators: monthly GDP, services index, 
 production index, construction index, and unemployment rate.\par
 \noindent
 1) Monthly GDP and components index (seasonally adjusted)
@@ -64,6 +65,7 @@ production index, construction index, and unemployment rate.\par
 \end{figure}
     
 \subsection{Stock Index (updated on 05-02-2021)}
+The following are two FTSE stock index datasets:
 1) FTSE 100 Index;\par
 \noindent
 2) FTSE All-Share Index
@@ -76,7 +78,7 @@ production index, construction index, and unemployment rate.\par
         
 \section{Methodology and Results}
 1. To answer the first research question, correlations between COVID-19 severity indicators
-and economics indicators(including stock index) have been examined:
+and economics indicators(including stock index) are examined:
 
 \begin{table}[H]
 \centering
@@ -99,9 +101,9 @@ and economics indicators(including stock index) have been examined:
 
 \noindent
 2. As for the second question, regression analysis is implemented to further explore how the COVID-19 indicators impact 
-the economics indicators. Only highly and significantly correlated variables are chosen to perform regression analysis.
-Table 4 and Table 5 is the summary of regression analysis (with only one parameter) on COVID-19 indicators with economics indicators 
-and stock indexes, respectively;\par
+the economics indicators. Only highly and significantly correlated variables are chosen to perform the regression analysis.
+Table 4 and Table 5 is the summary of the regression analysis (with only one parameter) on COVID-19 indicators and economics indicators 
+/stock indexes, respectively;\par
 \noindent
 
 \begin{table}[H]
@@ -150,12 +152,12 @@ and stock indexes, respectively;\par
 relationship with economics indicators and it negatively affects the these indicators.
 One additional death case will lead to these indicators decrease 0.00073, 0.00068, 0.0074, and 0.0014.\par
 \noindent
-2) As for cumulative COVID-19 indicators, all the three indicators only have significant and highly positive correlations
+2) As for cumulative COVID-19 indicators, the three indicators only have significant and highly positive correlations
 with the unemployment rate. One additional cumulative case, death, patient will lead the unemployment rate to increase 1.09e-6, 2.04e-5, and 7.14e-6, respectively.\par
 \noindent
 3) All the COVID-19 indicators have significant correlations with two stock indexes. Among these indicators, all the cumulative indicators and 
-'cases' indicator have relatively high correlations with stock indexes. One additional cumulative case, death, patient, and newly-added case will lead the 
-FTSE 100 index increase 0.0124, 0.0031, 0.00023, and 0.0112, respectively; whereas they will make FTSE All Share index increase 0.0083, 0.0021, 0.00016, and 0.0080, 
+'cases' indicators have relatively high correlations with stock indexes. One additional cumulative case, death, patient, and newly-added case will lead the 
+FTSE 100 index to increase 0.0124, 0.0031, 0.00023, and 0.0112, respectively; whereas they will make FTSE All Share index increase 0.0083, 0.0021, 0.00016, and 0.0080, 
 respectively.\par
 
 \hspace*{\fill}
@@ -165,30 +167,77 @@ respectively.\par
 \noindent
 1) The number of instances of economics indicators (9 to 11) is relatively limited. More instances will allow us to perform more accurate analysis;\par
 \noindent
-2) As we can see from the COVID-19 figures above, the COVID-19 crisis in the UK can be divided to three stages. It would be 
+2) As we can see from the COVID-19 figures above, the COVID-19 crisis in the UK can be divided into three stages. It would be 
 better to analyse the correlations between the COVID-19 indicators and stock indexes at different stages;\par
 \noindent
 3) Although all the simple linear regression models above are significant and have relatively good R-square score, the linear regression itslef may be 
-too simple to represent how COVID-19 indicators impact the economics indicators and the stock market exactly.\par
-
+too simple to demonstrate how COVID-19 indicators impact the economics indicators and the stock market exactly.\par
 
 \begin{appendices}
 \renewcommand\thefigure{\Alph{section}\arabic{figure}}  
 \section{Appendix}
 \setcounter{table}{0}
-    \begin{table}[H]
-        \begin{center}
-        \caption{Summary of SAS Steps and Procedures}
-        \begin{tabular}{lll}
-            \toprule
-            Step/Process Name&Macro Name&Used for\\
-            proc import&importdata&import raw datasets from csv. or excel files
-            \midrule
-            FTSE100&CumDeaths&0.0124\\
-            FTSE100&CumPatients&0.0031\\
-            \bottomrule
-        \end{tabular}
-        \end{center}
-    \end{table}
+\begin{table}[H]
+    \caption{Summary of Steps and Procedures}
+    \begin{tabular}{|c|l|l|l|}
+        \hline
+        Number&Step/process name&Macro name&Used for\\
+        \hline
+        1&proc import&importdata&\makecell[l]{Import all the raw datasets from seven csv \\and excel files}\\
+        \hline
+        2&proc sort&sortdata&\makecell[l]{Sort datasets by common variables:\\e.g. sort 3 COVID-19 datasets by 'date'}\\
+        \hline
+        3&proc merge&mergedata&\makecell[l]{Merg datasets by common variables:\\e.g. merge 3 COVID-19 datasets by 'date'}\\
+        \hline
+        4&proc print&no&\makecell[l]{Print datasets:\\e.g. print COVID19-final}\\
+        \hline
+        5&proc contents&no&\makecell[l]{Print the contents of datasets:\\e.g. print contents of COVID19-final}\\
+        \hline
+        6&data step drop&no&\makecell[l]{Drop some variables:\\e.g. drop areaType in COVID19-final}\\
+        \hline
+        7&data step delete/output&no&\makecell[l]{Delet/Select some rows:\\e.g. delete 1-6 rows in GDP-components}\\
+        \hline
+        8&data step rename&no&\makecell[l]{Rename variable names:\\e.g. rename 'title' in GDP-component}\\
+        \hline
+        9&data step input/format&no&\makecell[l]{Set the type/format of variables:\\e.g. convert 'month' to monname. format}\\
+        \hline
+        10&proc means&statistics&\makecell[l]{Get the statistics info of variables:\\e.g. the min p5 Q1... of variables}\\
+        \hline
+        11&proc sgplot1&barlineplot&\makecell[l]{Make a plot with one line and bar:\\e.g. the figure 'Deaths with COVID19'}\\
+        \hline
+        12&proc sgplot2&no&\makecell[l]{Make a plot with several lines and a bar:\\e.g. the figure for economics-final}\\
+        \hline
+        13&proc sgplot3&no&\makecell[l]{Make a plot with two lines:\\e.g. the figure 'FTSE Stock Index'}\\
+        \hline
+        14&proc sgplot4&scatter-single&\makecell[l]{Make a scatter plot for two variables:\\e.g. 'deaths' and 'monthlyGDP'}\\
+        \hline
+        15&proc sgplot5&scatter&\makecell[l]{Make a scatter plot for predictions and obs:\\e.g. the 'pred vs obs' figure}\\
+        \hline
+        16&proc corr&corr&\makecell[l]{Get the correlations of each two variables:\\e.g. the variables in covid19-stock}\\
+        \hline
+        17&proc reg&regression&\makecell[l]{Build a linear regression model:\\e.g. a model on 'deaths' and 'monthlyGDP'}\\
+        \hline        
+
+    \end{tabular}
+\end{table}   
+
+\setcounter{table}{0}
+\begin{table}[H]
+    \caption{Summary of Steps and Procedures (Continue)}
+    \begin{tabular}{|c|l|l|l|}
+        \hline
+        Number&Step/process name&Macro name&Used for\\
+        \hline
+        18&proc score&prediction&\makecell[l]{Make predictions based on the lr model:\\e.g. predict the stock indexes}\\
+        \hline
+        19&proc summary&no&\makecell[l]{Sum up selected variables by a given class:\\e.g. convert daily data to monthly data}\\
+        \hline
+        20&option validvarname&no&\makecell[l]{Set the format of the variable names:\\e.g. convert names with spaces
+        to normal format}\\
+        \hline
+
+    \end{tabular}
+\end{table} 
+
 \end{appendices}
 \end{document}
