@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.6)  16 FEB 2021 17:37
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.6)  16 FEB 2021 20:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -105,35 +105,40 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count182
 \@lastruleclass=\count183
 \@thisrulewidth=\dimen159
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count184
+\c@@ppsavesec=\count185
+\c@@ppsaveapp=\count186
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
 File: l3backend-xdvipdfmx.def 2020-03-12 L3 backend support: xdvipdfmx
-\g__graphics_track_int=\count184
+\g__graphics_track_int=\count187
 \l__pdf_internal_box=\box47
-\g__pdf_backend_object_int=\count185
-\g__pdf_backend_annotation_int=\count186
+\g__pdf_backend_object_int=\count188
+\g__pdf_backend_annotation_int=\count189
 ) (./Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 13.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -170,28 +175,28 @@ LaTeX Font Info:    ... okay on input line 12.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 13.
+(Font)              <14.4> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 13.
+(Font)              <7> on input line 14.
 [1
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 28.
+(Font)              <12> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 28.
+(Font)              <8> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 28.
+(Font)              <6> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 28.
+(Font)              <5> on input line 29.
 File: covid-19_cases.jpg Graphic file (type bmp)
 <covid-19_cases.jpg>
 File: covid19_deaths.jpg Graphic file (type bmp)
 <covid19_deaths.jpg>
 File: covid19_patients.jpg Graphic file (type bmp)
 <covid19_patients.jpg>
-File: economics_indicators.jpg Graphic file (type bmp)
-<economics_indicators.jpg>
+File: economics.jpg Graphic file (type bmp)
+<economics.jpg>
  [1]
 File: ftse.jpg Graphic file (type bmp)
 <ftse.jpg>
@@ -203,18 +208,125 @@ File: corr_economics_cum.jpg Graphic file (type bmp)
 File: corr_stock.jpg Graphic file (type bmp)
 <corr_stock.jpg>
  [3] [4]
-Overfull \hbox (11.87929pt too wide) in paragraph at lines 152--160
- [] 
- []
+./Report.tex:186: Misplaced \noalign.
+<recently read> \noalign 
+                         
+l.186             \midrule
+                          
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-[5] (./Report.aux) ) 
-Here is how much of TeX's memory you used:
- 1710 strings out of 479418
- 26313 string characters out of 5884586
- 277682 words of memory out of 5000000
- 19231 multiletter control sequences out of 15000+600000
- 536059 words of font info for 45 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 30i,8n,26p,197b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
+./Report.tex:187: Missing } inserted.
+<inserted text> 
+                }
+l.187             F
+                   TSE100&CumDeaths&0.0124\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-Output written on Report.pdf (6 pages).
+./Report.tex:187: Missing } inserted.
+<inserted text> 
+                }
+l.187             F
+                   TSE100&CumDeaths&0.0124\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Report.tex:187: Missing } inserted.
+<inserted text> 
+                }
+l.187             F
+                   TSE100&CumDeaths&0.0124\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Report.tex:187: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.187             F
+                   TSE100&CumDeaths&0.0124\\
+I'm guessing that you meant to end an alignment here.
+
+./Report.tex:187: Missing { inserted.
+<inserted text> 
+                {
+l.187             F
+                   TSE100&CumDeaths&0.0124\\
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+./Report.tex:187: Undefined control sequence.
+\@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
+                                                  
+l.187             F
+                   TSE100&CumDeaths&0.0124\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Report.tex:187: Misplaced alignment tab character &.
+l.187             FTSE100&
+                          CumDeaths&0.0124\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Report.tex:187: Misplaced alignment tab character &.
+l.187             FTSE100&CumDeaths&
+                                    0.0124\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Report.tex:188: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.188             F
+                   TSE100&CumPatients&0.0031\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Report.tex:188: Misplaced alignment tab character &.
+l.188             FTSE100&
+                          CumPatients&0.0031\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Report.tex:188: Misplaced alignment tab character &.
+l.188             FTSE100&CumPatients&
+                                      0.0031\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Report.tex:189: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+             

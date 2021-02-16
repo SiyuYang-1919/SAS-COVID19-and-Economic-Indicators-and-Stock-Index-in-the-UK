@@ -4,6 +4,7 @@
 \usepackage{float}
 \usepackage{subfigure}
 \usepackage{booktabs}
+\usepackage{appendix}
 \geometry{left=2cm,right=2cm}
 \title{COVID-19 and Economics Indicators in the UK}
 \author{Siyu YANG}
@@ -58,7 +59,7 @@ production index, construction index, and unemployment rate.\par
 \footnote[5]{https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/}
 \begin{figure}[H] 
 \centering 
-\includegraphics[width=10cm]{economics_indicators.jpg} 
+\includegraphics[width=9cm]{economics.jpg} 
 \caption{Economics Indicators}
 \end{figure}
     
@@ -69,7 +70,7 @@ production index, construction index, and unemployment rate.\par
 \footnote[6]{Source: Capital IQ}
 \begin{figure}[H] 
 \centering 
-\includegraphics[width=8cm]{ftse.jpg} 
+\includegraphics[width=9cm]{ftse.jpg} 
 \caption{FTSE Stock Indicators}
 \end{figure}
         
@@ -80,13 +81,13 @@ and economics indicators(including stock index) have been examined:
 \begin{table}[H]
 \centering
 \caption{Correlation Matrix Economics Indicators (new)}
-\includegraphics[width=15cm]{corr_economics_new.jpg}
+\includegraphics[width=13cm]{corr_economics_new.jpg}
 \end{table}
 
 \begin{table}[H]
 \centering
 \caption{Corrlation Matrix Economics Indicators (cum)}
-\includegraphics[width=15cm]{corr_economics_cum.jpg}
+\includegraphics[width=13cm]{corr_economics_cum.jpg}
 \end{table}
 
 \begin{table}[H]
@@ -94,18 +95,14 @@ and economics indicators(including stock index) have been examined:
 \caption{Correlation Matrix FTSE}
 \includegraphics[width=13cm]{corr_stock.jpg}
 \end{table}
-
 \hspace*{\fill}
 
 \noindent
 2. As for the second question, regression analysis is implemented to further explore how the COVID-19 indicators impact 
-the economics indicators. Only highly and significantly correlated variables are chosen to perform regression analysis.\par
-\noindent
-1) Table 4 and Table 5 is the summary of regression analysis (with only one parameter) on COVID-19 indicators with economics indicators 
+the economics indicators. Only highly and significantly correlated variables are chosen to perform regression analysis.
+Table 4 and Table 5 is the summary of regression analysis (with only one parameter) on COVID-19 indicators with economics indicators 
 and stock indexes, respectively;\par
 \noindent
-2) This report also tries to build regression models to predict the stock indexes with multiple variables. 
-Table 6 is the summary of some models with relatively good performance. 
 
 \begin{table}[H]
     \begin{center}
@@ -146,27 +143,52 @@ Table 6 is the summary of some models with relatively good performance.
     \end{center}
 \end{table}
 
-\begin{table}[H]
-    \begin{center}
-    \caption{Multi-variable Regression Models}
-    \begin{tabular}{llcccccc}
-        \toprule
-        Y&X1&Coef1&X2&Coef2&Intercept&p&R-square\\
-        \midrule
-        FTSE100&cumdeaths&0.025&cumpatients&-0.0031&5480.91&<0.0001&0.68\\
-        FTSE All Share&cumdeaths&0.011&cumpatients&-0.0008&3013.86&<0.0001&0.76\\
-        \bottomrule
-    \end{tabular}
-    \end{center}
-\end{table}
-
 \section{Conclusion and Limitations}
-From the analysis above, we can conclude:
+\textbf{Conclusions:}\par
+\noindent
 1) Among three newly-added COVID-19 indicators, only the number of deaths has close
 relationship with economics indicators and it negatively affects the these indicators.
-One additional death case will lead to these indicators decrease 0.00073, 0.00068, 0.0074, and 0.0014, respectively.
-2) 
+One additional death case will lead to these indicators decrease 0.00073, 0.00068, 0.0074, and 0.0014.\par
+\noindent
+2) As for cumulative COVID-19 indicators, all the three indicators only have significant and highly positive correlations
+with the unemployment rate. One additional cumulative case, death, patient will lead the unemployment rate to increase 1.09e-6, 2.04e-5, and 7.14e-6, respectively.\par
+\noindent
+3) All the COVID-19 indicators have significant correlations with two stock indexes. Among these indicators, all the cumulative indicators and 
+'cases' indicator have relatively high correlations with stock indexes. One additional cumulative case, death, patient, and newly-added case will lead the 
+FTSE 100 index increase 0.0124, 0.0031, 0.00023, and 0.0112, respectively; whereas they will make FTSE All Share index increase 0.0083, 0.0021, 0.00016, and 0.0080, 
+respectively.\par
 
-\begin{appendix}
-\end{appendix}
+\hspace*{\fill}
+
+\noindent
+\textbf{Limitations:}\par
+\noindent
+1) The number of instances of economics indicators (9 to 11) is relatively limited. More instances will allow us to perform more accurate analysis;\par
+\noindent
+2) As we can see from the COVID-19 figures above, the COVID-19 crisis in the UK can be divided to three stages. It would be 
+better to analyse the correlations between the COVID-19 indicators and stock indexes at different stages;\par
+\noindent
+3) Although all the simple linear regression models above are significant and have relatively good R-square score, the linear regression itslef may be 
+too simple to represent how COVID-19 indicators impact the economics indicators and the stock market exactly.\par
+
+
+\begin{appendices}
+\renewcommand\thefigure{\Alph{section}\arabic{figure}}  
+\section{Appendix}
+\setcounter{table}{0}
+    \begin{table}[H]
+        \begin{center}
+        \caption{Summary of SAS Steps and Procedures}
+        \begin{tabular}{lll}
+            \toprule
+            Step/Process Name&Macro Name&Used for\\
+            proc import&importdata&import raw datasets from csv. or excel files
+            \midrule
+            FTSE100&CumDeaths&0.0124\\
+            FTSE100&CumPatients&0.0031\\
+            \bottomrule
+        \end{tabular}
+        \end{center}
+    \end{table}
+\end{appendices}
 \end{document}
