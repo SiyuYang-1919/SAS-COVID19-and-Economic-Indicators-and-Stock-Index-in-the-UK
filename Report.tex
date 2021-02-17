@@ -7,8 +7,8 @@
 \usepackage{appendix}
 \usepackage{makecell}
 \geometry{left=2cm,right=2cm}
-\title{COVID-19 and Economics Indicators in the UK}
-\author{Siyu YANG}
+\title{How COVID-19 Impacts Economics Indicators in the UK}
+\author{}
 \date{}
 
 \begin{document}
@@ -27,13 +27,13 @@ The following three COVID-19 datasets contain the number of positive cases, deat
 respectively. Each dataset includes the newly-added number and cumulative number.\par
 \noindent
 1) Positive cases by spicemen date;
-\footnote[1]{https://coronavirus.data.gov.uk/details/cases};\par
+\footnote[1]{https://coronavirus.data.gov.uk/details/cases/};\par
 \noindent
 2) Deaths with COVID-19 within 28 days of positive test by date of death
-\footnote[2]{https://coronavirus.data.gov.uk/details/deaths};\par
+\footnote[2]{https://coronavirus.data.gov.uk/details/deaths/};\par
 \noindent
 3) Patients admitted to hospital
-\footnote[3]{https://coronavirus.data.gov.uk/details/healthcare}\par
+\footnote[3]{https://coronavirus.data.gov.uk/details/healthcare/}\par
 \begin{figure}[H]
 \centering
     \subfigure[COVID19 Cases]{
@@ -201,22 +201,26 @@ too simple to demonstrate how COVID-19 indicators impact the economics indicator
         \hline
         9&data step input/format&no&\makecell[l]{Set the type/format of variables:\\e.g. convert 'month' to monname. format}\\
         \hline
-        10&proc means&statistics&\makecell[l]{Get the statistics info of variables:\\e.g. the min p5 Q1... of variables}\\
-        \hline
-        11&proc sgplot1&barlineplot&\makecell[l]{Make a plot with one line and bar:\\e.g. the figure 'Deaths with COVID19'}\\
-        \hline
-        12&proc sgplot2&no&\makecell[l]{Make a plot with several lines and a bar:\\e.g. the figure for economics-final}\\
-        \hline
-        13&proc sgplot3&no&\makecell[l]{Make a plot with two lines:\\e.g. the figure 'FTSE Stock Index'}\\
-        \hline
-        14&proc sgplot4&scatter-single&\makecell[l]{Make a scatter plot for two variables:\\e.g. 'deaths' and 'monthlyGDP'}\\
-        \hline
-        15&proc sgplot5&scatter&\makecell[l]{Make a scatter plot for predictions and obs:\\e.g. the 'pred vs obs' figure}\\
-        \hline
-        16&proc corr&corr&\makecell[l]{Get the correlations of each two variables:\\e.g. the variables in covid19-stock}\\
-        \hline
-        17&proc reg&regression&\makecell[l]{Build a linear regression model:\\e.g. a model on 'deaths' and 'monthlyGDP'}\\
+        10&data step data&no&\makecell[l]{Create a new dataset:\\e.g. create the 'test' and 'teste2' dataset}\\
         \hline        
+        11&proc means&statistics&\makecell[l]{Get the statistics info of variables:\\e.g. the min p5 Q1... of variables}\\
+        \hline
+        12&proc sgplot1&barlineplot&\makecell[l]{Make a plot with one line and bar:\\e.g. the figure 'Deaths with COVID19'}\\
+        \hline
+        13&proc sgplot2&no&\makecell[l]{Make a plot with several lines and a bar:\\e.g. the figure for economics-final}\\
+        \hline
+        14&proc sgplot3&no&\makecell[l]{Make a plot with two lines:\\e.g. the figure 'FTSE Stock Index'}\\
+        \hline
+        15&proc sgplot4&scatter-single&\makecell[l]{Make a scatter plot for two variables:\\e.g. 'deaths' and 'monthlyGDP'}\\
+        \hline
+        16&proc sgplot5&scatter&\makecell[l]{Make a scatter plot for predictions and obs:\\e.g. the 'pred vs obs' figure}\\
+        \hline
+        17&proc corr&corr&\makecell[l]{Get the correlations of each two variables:\\e.g. the variables in covid19-stock}\\
+        \hline
+        18&proc reg&regression&\makecell[l]{Build a linear regression model:\\e.g. a model on 'deaths' and 'monthlyGDP'}\\
+        \hline
+        19&proc score&predictions&\makecell[l]{Make predictions on the lr model:\\e.g. predict the stock indexes}\\
+        \hline              
 
     \end{tabular}
 \end{table}   
@@ -228,11 +232,9 @@ too simple to demonstrate how COVID-19 indicators impact the economics indicator
         \hline
         Number&Step/process name&Macro name&Used for\\
         \hline
-        18&proc score&prediction&\makecell[l]{Make predictions based on the lr model:\\e.g. predict the stock indexes}\\
+        20&proc summary&no&\makecell[l]{Sum up selected variables by a given class:\\e.g. convert daily data to monthly data}\\
         \hline
-        19&proc summary&no&\makecell[l]{Sum up selected variables by a given class:\\e.g. convert daily data to monthly data}\\
-        \hline
-        20&option validvarname&no&\makecell[l]{Set the format of the variable names:\\e.g. convert names with spaces
+        21&option validvarname&no&\makecell[l]{Set the format of the variable names:\\e.g. convert names with spaces
         to normal format}\\
         \hline
 
