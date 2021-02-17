@@ -6,8 +6,9 @@
 \usepackage{booktabs}
 \usepackage{appendix}
 \usepackage{makecell}
+\usepackage{cmap}
 \geometry{left=2cm,right=2cm}
-\title{How COVID-19 Impacts Economics Indicators in the UK}
+\title{How COVID-19 Impacts Economic Indicators in the UK}
 \author{}
 \date{}
 
@@ -16,23 +17,23 @@
 
 \section{Research Questions}
 This report is aimed to research on the associations between the severity of COVID-19 and some important 
-economics indicators in the UK. More specifically, this report will answer the following questions:
-1) Which COVID-19 severity indicator(s) and which economics indicator(s) have high and significant correlations?
-2) And how the severity indicator(s) impact the economics indicator(s) exactly?
+economic indicators in the UK. More specifically, it will answer:
+1) Which COVID-19 severity indicators and which economic indicators have high and significant correlations?
+2) And how these severity indicators impact the economic indicators exactly?
 
 
 \section{Datasets}
 \subsection{COVID-19 Datasets (updated on 05-02-2021)}
-The following three COVID-19 datasets contain the number of positive cases, deaths, and patients admitted to hospitals, 
-respectively. Each dataset includes the newly-added number and cumulative number.\par
+The following three COVID-19 datasets contain the number of positive cases, deaths, and patients admitted to hospitals. 
+Each dataset includes the daily added number and cumulative number.\par
 \noindent
-1) Positive cases by spicemen date;
+1) Positive cases by specimen date;
 \footnote[1]{https://coronavirus.data.gov.uk/details/cases/};\par
 \noindent
 2) Deaths with COVID-19 within 28 days of positive test by date of death
 \footnote[2]{https://coronavirus.data.gov.uk/details/deaths/};\par
 \noindent
-3) Patients admitted to hospital
+3) Patients admitted to the hospitals
 \footnote[3]{https://coronavirus.data.gov.uk/details/healthcare/}\par
 \begin{figure}[H]
 \centering
@@ -50,7 +51,7 @@ respectively. Each dataset includes the newly-added number and cumulative number
 \end{figure}
 
 \subsection{Economic indicators (updated in November 2020)} 
-The following two datasets contain the data of five economics indicators: monthly GDP, services index, 
+The following two datasets contain the data of five economic indicators: monthly GDP, services index, 
 production index, construction index, and unemployment rate.\par
 \noindent
 1) Monthly GDP and components index (seasonally adjusted)
@@ -78,17 +79,17 @@ The following are two FTSE stock index datasets:
         
 \section{Methodology and Results}
 1. To answer the first research question, correlations between COVID-19 severity indicators
-and economics indicators(including stock index) are examined:
+and economic indicators(including stock index) are examined:
 
 \begin{table}[H]
 \centering
-\caption{Correlation Matrix Economics Indicators (new)}
+\caption{Correlation Matrix Economic Indicators (new)}
 \includegraphics[width=13cm]{corr_economics_new.jpg}
 \end{table}
 
 \begin{table}[H]
 \centering
-\caption{Corrlation Matrix Economics Indicators (cum)}
+\caption{Correlation Matrix Economic Indicators (cum)}
 \includegraphics[width=13cm]{corr_economics_cum.jpg}
 \end{table}
 
@@ -101,14 +102,13 @@ and economics indicators(including stock index) are examined:
 
 \noindent
 2. As for the second question, regression analysis is implemented to further explore how the COVID-19 indicators impact 
-the economics indicators. Only highly and significantly correlated variables are chosen to perform the regression analysis.
-Table 4 and Table 5 is the summary of the regression analysis (with only one parameter) on COVID-19 indicators and economics indicators 
-/stock indexes, respectively;\par
+the economic indicators. Only highly and significantly correlated variables are chosen to perform the regression analysis.
+Table 4 and Table 5 is the summary of the analysis:\par
 \noindent
 
 \begin{table}[H]
     \begin{center}
-    \caption{Regression Analysis on Economics Indicators}
+    \caption{Regression Analysis on Economic Indicators}
     \begin{tabular}{llcccc}
         \toprule
         Y&X&Coef&Intercept&p&R-square\\
@@ -148,15 +148,15 @@ Table 4 and Table 5 is the summary of the regression analysis (with only one par
 \section{Conclusion and Limitations}
 \textbf{Conclusions:}\par
 \noindent
-1) Among three newly-added COVID-19 indicators, only the number of deaths has close
-relationship with economics indicators and it negatively affects the these indicators.
+1) Among three daily added COVID-19 indicators, only the number of deaths has close
+relationship with economic indicators and it negatively affects these indicators.
 One additional death case will lead to these indicators decrease 0.00073, 0.00068, 0.0074, and 0.0014.\par
 \noindent
 2) As for cumulative COVID-19 indicators, the three indicators only have significant and highly positive correlations
 with the unemployment rate. One additional cumulative case, death, patient will lead the unemployment rate to increase 1.09e-6, 2.04e-5, and 7.14e-6, respectively.\par
 \noindent
-3) All the COVID-19 indicators have significant correlations with two stock indexes. Among these indicators, all the cumulative indicators and 
-'cases' indicators have relatively high correlations with stock indexes. One additional cumulative case, death, patient, and newly-added case will lead the 
+3) All the COVID-19 indicators have significant correlations with the stock indexes. Among these indicators, all the cumulative indicators and 
+'cases' indicators have relatively high correlations (>0.5) with stock indexes. One additional cumulative case, death, patient, and daily added case will lead the 
 FTSE 100 index to increase 0.0124, 0.0031, 0.00023, and 0.0112, respectively; whereas they will make FTSE All Share index increase 0.0083, 0.0021, 0.00016, and 0.0080, 
 respectively.\par
 
@@ -165,13 +165,13 @@ respectively.\par
 \noindent
 \textbf{Limitations:}\par
 \noindent
-1) The number of instances of economics indicators (9 to 11) is relatively limited. More instances will allow us to perform more accurate analysis;\par
+1) The number of instances of economic indicators (9 to 11) is relatively limited. More instances will allow us to perform more accurate analysis;\par
 \noindent
 2) As we can see from the COVID-19 figures above, the COVID-19 crisis in the UK can be divided into three stages. It would be 
 better to analyse the correlations between the COVID-19 indicators and stock indexes at different stages;\par
 \noindent
 3) Although all the simple linear regression models above are significant and have relatively good R-square score, the linear regression itslef may be 
-too simple to demonstrate how COVID-19 indicators impact the economics indicators and the stock market exactly.\par
+too simple to demonstrate how COVID-19 indicators impact the economic indicators and the stock market exactly.\par
 
 \begin{appendices}
 \renewcommand\thefigure{\Alph{section}\arabic{figure}}  
@@ -202,25 +202,23 @@ too simple to demonstrate how COVID-19 indicators impact the economics indicator
         9&data step input/format&no&\makecell[l]{Set the type/format of variables:\\e.g. convert 'month' to monname. format}\\
         \hline
         10&data step data&no&\makecell[l]{Create a new dataset:\\e.g. create the 'test' and 'teste2' dataset}\\
-        \hline        
-        11&proc means&statistics&\makecell[l]{Get the statistics info of variables:\\e.g. the min p5 Q1... of variables}\\
+        \hline 
+        11&proc summary&no&\makecell[l]{Sum up selected variables by a given class\\e.g. convert daily data to monthly data}\\
+        \hline       
+        12&proc means&statistics&\makecell[l]{Get the statistics info of variables:\\e.g. the min p5 Q1... of variables}\\
         \hline
-        12&proc sgplot1&barlineplot&\makecell[l]{Make a plot with one line and bar:\\e.g. the figure 'Deaths with COVID19'}\\
+        13&proc sgplot1&barlineplot&\makecell[l]{Make a plot with one line and bar:\\e.g. the figure 'Deaths with COVID19'}\\
         \hline
-        13&proc sgplot2&no&\makecell[l]{Make a plot with several lines and a bar:\\e.g. the figure for economics-final}\\
+        14&proc sgplot2&no&\makecell[l]{Make a plot with several lines and a bar:\\e.g. the figure for economics-final}\\
         \hline
-        14&proc sgplot3&no&\makecell[l]{Make a plot with two lines:\\e.g. the figure 'FTSE Stock Index'}\\
+        15&proc sgplot3&no&\makecell[l]{Make a plot with two lines:\\e.g. the figure 'FTSE Stock Index'}\\
         \hline
-        15&proc sgplot4&scatter-single&\makecell[l]{Make a scatter plot for two variables:\\e.g. 'deaths' and 'monthlyGDP'}\\
+        16&proc sgplot4&scatter-single&\makecell[l]{Make a scatter plot for two variables:\\e.g. 'deaths' and 'monthlyGDP'}\\
         \hline
-        16&proc sgplot5&scatter&\makecell[l]{Make a scatter plot for predictions and obs:\\e.g. the 'pred vs obs' figure}\\
+        17&proc sgplot5&scatter&\makecell[l]{Make a scatter plot for predictions and obs:\\e.g. the 'pred vs obs' figure}\\
         \hline
-        17&proc corr&corr&\makecell[l]{Get the correlations of each two variables:\\e.g. the variables in covid19-stock}\\
+        18&proc corr&corr&\makecell[l]{Get the correlations of each two variables:\\e.g. the variables in covid19-stock}\\
         \hline
-        18&proc reg&regression&\makecell[l]{Build a linear regression model:\\e.g. a model on 'deaths' and 'monthlyGDP'}\\
-        \hline
-        19&proc score&predictions&\makecell[l]{Make predictions on the lr model:\\e.g. predict the stock indexes}\\
-        \hline              
 
     \end{tabular}
 \end{table}   
@@ -232,8 +230,10 @@ too simple to demonstrate how COVID-19 indicators impact the economics indicator
         \hline
         Number&Step/process name&Macro name&Used for\\
         \hline
-        20&proc summary&no&\makecell[l]{Sum up selected variables by a given class:\\e.g. convert daily data to monthly data}\\
+        19&proc reg&regression&\makecell[l]{Build a linear regression model:\\e.g. a model on 'deaths' and 'monthlyGDP'}\\
         \hline
+        20&proc score&predictions&\makecell[l]{Make predictions on the lr model:\\e.g. predict the stock indexes}\\
+        \hline              
         21&option validvarname&no&\makecell[l]{Set the format of the variable names:\\e.g. convert names with spaces
         to normal format}\\
         \hline
