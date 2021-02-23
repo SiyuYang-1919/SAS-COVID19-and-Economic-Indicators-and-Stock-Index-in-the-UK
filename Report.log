@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.6)  17 FEB 2021 09:11
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.6)  23 FEB 2021 00:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -229,7 +229,7 @@ File: corr_economics_cum.jpg Graphic file (type bmp)
 File: corr_stock.jpg Graphic file (type bmp)
 <corr_stock.jpg>
  [3] [4]
-Overfull \hbox (22.67522pt too wide) in paragraph at lines 182--224
+Overfull \hbox (22.67522pt too wide) in paragraph at lines 183--225
 [][] 
  []
 
@@ -237,7 +237,7 @@ Overfull \hbox (22.67522pt too wide) in paragraph at lines 182--224
 Overfull \vbox (13.209pt too high) has occurred while \output is active []
 
  [6]
-Overfull \hbox (27.41122pt too wide) in paragraph at lines 229--242
+Overfull \hbox (27.41122pt too wide) in paragraph at lines 230--243
 [][] 
  []
 
@@ -245,7 +245,7 @@ Overfull \hbox (27.41122pt too wide) in paragraph at lines 229--242
 Here is how much of TeX's memory you used:
  2020 strings out of 479418
  30193 string characters out of 5884586
- 292015 words of memory out of 5000000
+ 292030 words of memory out of 5000000
  19526 multiletter control sequences out of 15000+600000
  536067 words of font info for 46 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

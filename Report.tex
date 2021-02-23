@@ -8,7 +8,7 @@
 \usepackage{makecell}
 \usepackage{cmap}
 \geometry{left=2cm,right=2cm}
-\title{How COVID-19 Impacts Economic Indicators in the UK}
+\title{How COVID-19 Impacts Economic Indicators and Stock Index in the UK}
 \author{}
 \date{}
 
@@ -17,9 +17,9 @@
 
 \section{Research Questions}
 This report is aimed to research on the associations between the severity of COVID-19 and some important 
-economic indicators in the UK. More specifically, it will answer:
-1) Which COVID-19 severity indicators and which economic indicators have high and significant correlations?
-2) And how these severity indicators impact the economic indicators exactly?
+economic indicators/the stock index in the UK. More specifically, it will answer:
+1) Which COVID-19 severity indicators and which economic indicators/stock index have high and significant correlations?
+2) And how these severity indicators impact the economic indicators/stock index exactly?
 
 
 \section{Datasets}
@@ -61,25 +61,26 @@ production index, construction index, and unemployment rate.\par
 \footnote[5]{https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/}
 \begin{figure}[H] 
 \centering 
-\includegraphics[width=9cm]{economics.jpg} 
+\includegraphics[width=8cm]{economics.jpg} 
 \caption{Economics Indicators}
 \end{figure}
     
 \subsection{Stock Index (updated on 05-02-2021)}
-The following are two FTSE stock index datasets:
+The following are two FTSE stock index datasets:\par
+\noindent
 1) FTSE 100 Index;\par
 \noindent
 2) FTSE All-Share Index
 \footnote[6]{Source: Capital IQ}
 \begin{figure}[H] 
 \centering 
-\includegraphics[width=9cm]{ftse.jpg} 
+\includegraphics[width=8cm]{ftse.jpg} 
 \caption{FTSE Stock Indicators}
 \end{figure}
         
 \section{Methodology and Results}
 1. To answer the first research question, correlations between COVID-19 severity indicators
-and economic indicators(including stock index) are examined:
+and economic indicators/stock index are examined:
 
 \begin{table}[H]
 \centering
@@ -102,7 +103,7 @@ and economic indicators(including stock index) are examined:
 
 \noindent
 2. As for the second question, regression analysis is implemented to further explore how the COVID-19 indicators impact 
-the economic indicators. Only highly and significantly correlated variables are chosen to perform the regression analysis.
+the economic indicators/stock index. Only highly and significantly correlated variables are chosen to perform the regression analysis.
 Table 4 and Table 5 is the summary of the analysis:\par
 \noindent
 
@@ -155,7 +156,7 @@ One additional death case will lead to these indicators decrease 0.00073, 0.0006
 2) As for cumulative COVID-19 indicators, the three indicators only have significant and highly positive correlations
 with the unemployment rate. One additional cumulative case, death, patient will lead the unemployment rate to increase 1.09e-6, 2.04e-5, and 7.14e-6, respectively.\par
 \noindent
-3) All the COVID-19 indicators have significant correlations with the stock indexes. Among these indicators, all the cumulative indicators and 
+3) All the COVID-19 indicators have significant correlations with two stock indexes. Among these indicators, all the cumulative indicators and 
 'cases' indicators have relatively high correlations (>0.5) with stock indexes. One additional cumulative case, death, patient, and daily added case will lead the 
 FTSE 100 index to increase 0.0124, 0.0031, 0.00023, and 0.0112, respectively; whereas they will make FTSE All Share index increase 0.0083, 0.0021, 0.00016, and 0.0080, 
 respectively.\par
